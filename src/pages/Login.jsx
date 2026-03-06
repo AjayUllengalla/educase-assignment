@@ -1,73 +1,44 @@
-import { Form, Button } from "react-bootstrap"
-import { useNavigate } from "react-router-dom"
+import { Form } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
+import "../register.css";
 
-function Login(){
+function Login() {
+  const navigate = useNavigate();
 
-const navigate = useNavigate()
+  return (
+    <div className="register-wrapper">
+      <div className="register-card">
+        <div className="back-link" onClick={() => navigate("/")}>
+          ← Back
+        </div>
 
-return(
+        <h2 className="register-title">
+          Signin to your <br /> PopX account
+        </h2>
 
-<div className="page-container">
+        <p style={{ color: "#777", marginBottom: "25px" }}>
+          Lorem ipsum dolor sit amet, <br />
+          consectetur adipiscing elit.
+        </p>
 
-<div className="mobile-container">
+        <Form>
+          <div className="form-group-custom">
+            <label>Email Address</label>
+            <input type="email" placeholder="Enter email address" />
+          </div>
 
-<h2 className="title">
-Signin to your <br/> PopX account
-</h2>
+          <div className="form-group-custom">
+            <label>Password</label>
+            <input type="password" placeholder="Enter password" />
+          </div>
 
-<p className="subtitle">
-Lorem ipsum dolor sit amet,
-consectetur adipiscing elit.
-</p>
-
-<Form>
-
-<Form.Group className="mb-3">
-
-<Form.Label className="label-text">
-Email Address
-</Form.Label>
-
-<Form.Control
-className="input-box"
-type="email"
-placeholder="Enter email address"
-/>
-
-</Form.Group>
-
-<Form.Group className="mb-4">
-
-<Form.Label className="label-text">
-Password
-</Form.Label>
-
-<Form.Control
-className="input-box"
-type="password"
-placeholder="Enter password"
-/>
-
-</Form.Group>
-
-<Button
-variant="secondary"
-className="w-100"
-onClick={()=>navigate("/account")}
->
-
-Login
-
-</Button>
-
-</Form>
-
-</div>
-
-</div>
-
-)
-
+          <button className="login-btn" onClick={() => navigate("/account")}>
+            Login
+          </button>
+        </Form>
+      </div>
+    </div>
+  );
 }
 
-export default Login
+export default Login;
