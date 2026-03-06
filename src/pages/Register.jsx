@@ -8,7 +8,9 @@ function Register() {
   return (
     <div className="register-wrapper">
       <div className="register-card">
-        <div className="back-link">← Back</div>
+        <div className="back-link" onClick={() => navigate("/")}>
+          ← Back
+        </div>
 
         <h2 className="register-title">
           Create your <br /> PopX account
