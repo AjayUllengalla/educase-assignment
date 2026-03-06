@@ -89,3 +89,21 @@ color:white;
 background:#cfcfcf;
 margin-top:10px;
 }
+.app-frame{
+display:flex;
+justify-content:center;
+align-items:flex-start;
+/* min-height:100vh; */
+background:#f4f4f4;
+padding:20px;
+}
+
+.mobile-screen{
+width:375px;
+min-height:700px;
+background:white;
+border:0.1px solid #000;
+border-radius:10px;
+box-shadow:0 4px 12px rgba(0,0,0,0.1);
+overflow:hidden;
+}

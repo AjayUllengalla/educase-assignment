@@ -1,38 +1,30 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Welcome from './pages/Welcome'
-import Login from './pages/Login'
-import Register from './pages/Register'
-import Account from './pages/Account'
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Welcome from "./pages/Welcome";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import Account from "./pages/Account";
 
 function App() {
- 
-
   return (
     <>
-     <BrowserRouter>
-
-      <div className="container d-flex justify-content-center">
-        <div style={{width:"375px"}}>
-
-          <Routes>
-
-            <Route path="/" element={<Welcome/>}/>
-            <Route path="/login" element={<Login/>}/>
-            <Route path="/register" element={<Register/>}/>
-            <Route path="/account" element={<Account/>}/>
-
-          </Routes>
-
+      <div className="app-frame">
+        <div className="mobile-screen">
+          <BrowserRouter>
+            <Routes>
+              <Route path="/" element={<Welcome />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/register" element={<Register />} />
+              <Route path="/account" element={<Account />} />
+            </Routes>
+          </BrowserRouter>
         </div>
       </div>
-
-    </BrowserRouter>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
